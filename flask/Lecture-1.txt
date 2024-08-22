@@ -1,2 +1,55 @@
 Introduction to Flask :-
 =========================
+1. Flask is a micro web framework for Python that is simple and easy to use, making it an excellent choice for 
+   beginners who want to build web applications.
+
+2. We'll walk you through the basics of Flask and get you started with your first Flask application.
+
+
+Installation :-
+================
+1. You can install Flask using pip, the Python package manager:
+	pip install flask
+
+
+Your First Flask Application :-
+===============================
+1. Let's create a simple "Hello, Flask!" web application. Create a file named app.py with the following code:
+
+	Example :- 
+	-----------
+	from flask import Flask
+	app = Flask(__name)
+	@app.route('/')
+
+	def hello():
+		return 'hello world!'
+
+	if __name__ == '__main__':
+		app.run()
+
+2. Run the file :- python app.py
+
+3. Flask application should now be running, and you can access it in your browser at : http://localhost:5000
+
+
+Routing and Views :- 
+====================
+1. Flask uses routes to define which URLs trigger which functions. 
+
+2. In the example above, @app.route('/') decorates the hello() function, making it accessible at the root URL. 
+
+3. You can define multiple routes and views for your application
+
+Templates and HTML
+==================
+Example :- 
+----------
+from flask import Flask, render_template
+app = Flask(__name)
+@app.route('/')
+def hello():
+    return render_template('index.html', name='Flask')
+
+1. Make sure to create an index.html file in a "templates" folder with the necessary HTML structure and 
+   placeholders for dynamic content
