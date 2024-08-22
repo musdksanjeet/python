@@ -56,10 +56,13 @@ Templates and HTML
 Example :- 
 ----------
 from flask import Flask, render_template
-app = Flask(__name)
+app = Flask(__name__)
 @app.route('/')
 def hello():
     return render_template('index.html', name='Flask')
+
+if (__name__) == '__main__':
+	app.run()
 
 1. Make sure to create an index.html file in a "templates" folder with the necessary HTML structure and 
    placeholders for dynamic content
