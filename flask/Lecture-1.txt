@@ -8,9 +8,19 @@ Introduction to Flask :-
 
 Installation :-
 ================
-1. You can install Flask using pip, the Python package manager:
-	pip install flask
+1. Create an environment :-
+   ----------------------
+   a. $ mkdir myproject
+	b. $ cd myproject
+	c. $ python3 -m venv .venv
 
+2. Activate the environment :- 
+   ---------------------------
+   . .venv/bin/activate
+
+3. Install Flask :-
+	-----------------
+	pip install flask
 
 Your First Flask Application :-
 ===============================
